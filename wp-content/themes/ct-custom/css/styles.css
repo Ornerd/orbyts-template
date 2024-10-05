@@ -1,0 +1,439 @@
+@font-face {
+  font-family: bebas;
+  src: url(../fonts/Bebas-Regular.ttf);
+}
+@font-face {
+  font-family: myriad;
+  src: url(../fonts/MYRIADPRO-REGULAR.OTF);
+}
+@font-face {
+  font-family: openSans;
+  src: url(../fonts/OpenSans-VariableFont_wdth\,wght.ttf);
+}
+@font-face {
+  font-family: ubuntu;
+  src: url(../fonts/Ubuntu-Regular.ttf);
+}
+@font-face {
+  font-family: ubuntuLight;
+  src: url(../fonts/Ubuntu-Light.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.wrapper {
+  max-width: 960px;
+  width: 100%;
+  padding: 5px 10px;
+  margin: 0 auto;
+}
+
+/*header area*/
+.contact-us {
+  background-color: #ff6200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: bebas;
+  font-size: large;
+}
+.contact-us .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.contact-us .wrapper :last-child > * {
+  cursor: pointer;
+}
+.contact-us .wrapper div {
+  display: flex;
+  align-items: center;
+}
+.contact-us .wrapper div p:first-child {
+  color: rgb(0, 0, 0);
+}
+.contact-us .wrapper div p:last-child {
+  color: white;
+  margin-left: 10px;
+}
+.contact-us .wrapper a:visited {
+  color: inherit;
+}
+
+.header-links {
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  height: 100px;
+  z-index: 10000;
+}
+.header-links a {
+  color: black;
+}
+.header-links .wrapper {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-links .wrapper .ham-menu {
+  display: none;
+}
+.header-links .wrapper nav {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.header-links .wrapper nav .nav-element {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 100%;
+  text-wrap: nowrap;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+}
+.header-links .wrapper nav .nav-element .first-nav {
+  font-family: myriad;
+}
+.header-links .wrapper nav .nav-element:hover {
+  padding-top: 8px;
+}
+.header-links .wrapper nav .nav-element:hover .first-nav {
+  font-weight: bold;
+}
+.header-links .wrapper nav .nav-element:hover span {
+  background-color: #ff6200;
+  width: 90%;
+  height: 5px;
+  margin-top: 3px;
+}
+.header-links .wrapper nav .nav-element:hover .sub-nav {
+  display: flex;
+}
+.header-links .wrapper nav .nav-element:nth-last-child(1) .sub-nav, .header-links .wrapper nav .nav-element:nth-last-child(2) .sub-nav, .header-links .wrapper nav .nav-element:nth-last-child(3) .sub-nav {
+  position: absolute;
+  top: 80px;
+  left: -63px;
+}
+.header-links .wrapper nav .nav-element:nth-last-child(1) .sub-nav .sub-sub-nav, .header-links .wrapper nav .nav-element:nth-last-child(2) .sub-nav .sub-sub-nav, .header-links .wrapper nav .nav-element:nth-last-child(3) .sub-nav .sub-sub-nav {
+  position: absolute;
+  top: -26px;
+  left: -100%;
+  padding: 25px 0px;
+  background-color: white;
+  border: 1px solid;
+  display: none;
+}
+.header-links .wrapper nav .nav-element:last-child {
+  margin-right: 0px;
+}
+.header-links .wrapper nav .nav-element a:hover {
+  font-weight: bold;
+}
+.header-links .wrapper nav .nav-element .sub-nav {
+  position: absolute;
+  top: 80px;
+  width: 15ch;
+  background-color: white;
+  padding: 25px 0px;
+  border: 1px solid;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
+  font-family: openSans;
+  text-overflow: ellipsis;
+}
+.header-links .wrapper nav .nav-element .sub-nav li {
+  width: 15ch;
+  padding: 0px 15px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 10px;
+}
+.header-links .wrapper nav .nav-element .sub-nav li .first-sub-nav {
+  overflow: hidden;
+  text-wrap: nowrap;
+  width: 100%;
+  text-overflow: ellipsis;
+}
+.header-links .wrapper nav .nav-element .sub-nav li:last-child {
+  margin-bottom: 0px;
+}
+.header-links .wrapper nav .nav-element .sub-nav li:hover .first-sub-nav {
+  font-weight: bold;
+}
+.header-links .wrapper nav .nav-element .sub-nav li:hover .sub-sub-nav {
+  display: block;
+}
+.header-links .wrapper nav .nav-element .sub-nav li .sub-sub-nav {
+  position: absolute;
+  top: -26px;
+  left: 100%;
+  padding: 25px 0px;
+  background-color: white;
+  border: 1px solid;
+  display: none;
+}
+
+.content-nav {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+.content-nav a {
+  color: #878787;
+  font-family: ubuntu;
+}
+.content-nav a:hover, .content-nav a.active, .content-nav a.current-menu-item {
+  color: black;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+/*content area*/
+main {
+  width: 100%;
+  font-family: ubuntuLight;
+  color: #878787;
+}
+main article h1 {
+  font-family: openSans;
+  font-weight: 700;
+}
+main .container {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: space-between;
+}
+main .container section {
+  width: 45%;
+}
+main .container section h1 {
+  text-transform: uppercase;
+  font-family: openSans;
+  color: #ff6200;
+  font-weight: 500;
+}
+/*input area, adjusted to somwehat align with the contact-form-7*/
+main .container .input-area >* {
+  display: block;
+}
+main .container .contact-details span, main .container .input-area .span {
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  height: 8px;
+  background-color: #525252;
+}
+main .container .input-area input, main .container .input-area textarea {
+  text-decoration: none;
+  width: 100%;
+  background-color: #f6f6f6;
+  border: none;
+  padding: 10px;
+  font-family: ubuntuLight;
+}
+main .container .input-area .custom-input-wrapper p {  /* changing from div tag to p tag to match with form-7's format */
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  justify-content: space-between;
+  gap: 5px;
+}
+main .container .input-area textarea {
+  height: 105px;
+}
+main .container .input-area button {
+  margin-top: 20px;
+  padding: 12px 22px;
+  background-color: #ff6200;
+  text-transform: uppercase;
+  color: white;
+  font-family: openSans;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+}
+main .container .input-area button:hover {
+  background-color: #f9f9f9;
+  color: #ff6200;
+  border: 1px solid black;
+}
+/*contact details section*/
+main .container .contact-details {
+  text-transform: capitalize;
+  font-family: myriad;
+  color: #595959;
+}
+main .container .contact-details h4 {
+  margin-bottom: 10px;
+  font-weight: 100;
+}
+main .container .contact-details p {
+  margin-bottom: 20px;
+}
+main .container .contact-details .socials {
+  margin-top: 50px;
+}
+
+@media screen and (max-width: 960px) {
+  .header-links {
+    position: relative;
+  }
+  .contact-us .wrapper div:first-child p {
+   text-wrap: nowrap;
+  }
+  .contact-us .wrapper div:last-child {
+   flex-wrap: wrap;
+   justify-content: flex-end;
+   margin-left: 10px;
+  }
+  .header-links .wrapper .ham-menu {
+    z-index: 5000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 45px;
+    margin-right: 10px;
+    cursor: pointer;
+    gap: 10%;
+    position: relative;
+  }
+  .header-links .wrapper .ham-menu::before {
+    content: "";
+    position: absolute;
+    top: 30%;
+    background-color: black;
+    cursor: pointer;
+    width: 80%;
+    height: 5px;
+    border-radius: 1rem;
+    transition: 200ms ease;
+  }
+  .header-links .wrapper .ham-menu::after {
+    content: "";
+    position: absolute;
+    top: 60%;
+    background-color: black;
+    cursor: pointer;
+    width: 80%;
+    height: 5px;
+    border-radius: 1rem;
+    transition: 200ms ease;
+  }
+  .header-links .wrapper .ham-menu input {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    outline: none;
+    pointer-events: none;
+  }
+  .header-links .wrapper .ham-menu input:checked {
+    background-color: yellow;
+  }
+  .header-links .wrapper .ham-menu:has(input:checked)::before {
+    rotate: 45deg;
+    top: 50%;
+    background-color: #414f6b;
+  }
+  .header-links .wrapper .ham-menu:has(input:checked)::after {
+    rotate: -45deg;
+    top: 50%;
+    background-color: #414f6b;
+  }
+  .header-links .wrapper .ham-menu:has(input:checked) + nav {
+    transform: translateY(0%);
+    height: -moz-fit-content;
+    height: fit-content;
+    max-height: 100vh;
+    overflow-y: visible;
+  }
+  .header-links .wrapper nav {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: absolute;
+    top: 0%;
+    margin-top: 100px;
+    left: 0%;
+    width: 100vw;
+    height: 0;
+    background-color: #f9f9f9;
+    overflow-y: hidden;
+  }
+  .header-links .wrapper nav .nav-element {
+    width: 100%;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 10px 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1176470588);
+    align-items: flex-start;
+  }
+  .header-links .wrapper nav .nav-element:hover span {
+    width: 7ch;
+  }
+  .header-links .wrapper nav .nav-element .sub-nav {
+    position: absolute;
+    top: -12px;
+    left: 9ch;
+    background-color: white;
+    padding: 20px 0px;
+  }
+  .header-links .wrapper nav .nav-element .sub-nav li .sub-sub-nav {
+    position: absolute;
+    top: -21px;
+    left: 100%;
+    padding: 20px 0px;
+    background-color: white;
+    border: 1px solid;
+    display: none;
+  }
+  .header-links .wrapper nav .nav-element:nth-last-child(1) .sub-nav, .header-links .wrapper nav .nav-element:nth-last-child(2) .sub-nav, .header-links .wrapper nav .nav-element:nth-last-child(3) .sub-nav {
+    position: absolute;
+    top: -12px;
+    left: 9ch;
+  }
+  .header-links .wrapper nav .nav-element:nth-last-child(1) .sub-nav .sub-sub-nav, .header-links .wrapper nav .nav-element:nth-last-child(2) .sub-nav .sub-sub-nav, .header-links .wrapper nav .nav-element:nth-last-child(3) .sub-nav .sub-sub-nav {
+    position: absolute;
+    top: -21px;
+    left: 100%;
+    padding: 20px 0px;
+    background-color: white;
+    border: 1px solid;
+    display: none;
+  }
+  main .container {
+    flex-wrap: wrap;
+  }
+  main .container section {
+    width: 100%;
+    max-width: 720px;
+  }
+  main .container section:last-child {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+}
