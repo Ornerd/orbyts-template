@@ -9,7 +9,7 @@ get_header(); ?>
   <main>
         
         <article>
-            <?php the_content(); ?>  <!-- the protion alloted to editing on the admin's end.-->
+            <?php the_content(); ?>  <!-- the portion alloted to editing on the admin's end.-->
         </article>
 
         <div class="container">
